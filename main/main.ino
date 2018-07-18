@@ -1,4 +1,5 @@
 #include <Servo.h>
+
 Servo actuator_x;
 Servo actuator_y;
 
@@ -26,11 +27,9 @@ void loop(){
     }
     
     if (car_detected == 6) {
-        
+        Serial.print("Car Detected! ");
+        Serial.println(car_detected);
     }
-    
-    Serial.print("Sensor value: ");
-    Serial.println(sensorVal);
     
     delay(500);
 }
