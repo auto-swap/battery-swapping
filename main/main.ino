@@ -6,9 +6,10 @@ Servo actuator_y;
 const int actuator_x_pin = 13;
 const int actuator_y_pin = 7;
 const int light_sensor_front_pin = A0;
-const int light_sensor_back_pin = A0;
+const int light_sensor_back_pin = A1;
 
-int sensor_value;
+int light_sensor_front_value;
+int light_sensor_back_value;
 int car_detected;
 
 
@@ -18,9 +19,10 @@ void setup(){
 }
 
 void loop(){
-    sensor_value = analogRead(light_sensor_front_pin);
+    light_sensor_front_value = analogRead(light_sensor_front_pin);
+    light_sensor_back_value = analogRead(light_sensor_back_pin);
     
-    if (sensor_value <= 10) {
+    if (light_sensor_front_value <= 15 && light_sensor_back_value <= 15) {
         car_detected += 1;
     } else {
         car_detected = 0;
