@@ -49,8 +49,8 @@ void setup(){
         delay(1000);
     }
 
-    front_sensor_cut_off = light_sensor_front_initial*0.1;
-    back_sensor_cut_off = light_sensor_back_initial*0.1;
+    front_sensor_cut_off = light_sensor_front_initial*0.15;
+    back_sensor_cut_off = light_sensor_back_initial*0.15;
 }
 
 void loop(){
